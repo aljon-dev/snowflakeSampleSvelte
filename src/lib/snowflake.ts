@@ -1,18 +1,18 @@
 import snowflake from 'snowflake-sdk'
 
 let isConnected:boolean = false;
-
+        // You may Check it on Settings at Snowflake account 
 export const connection = snowflake.createConnection({
-    account:'MJSUGJZ-QU99971',
-    username:'ALJONJIMENEZ',
-    password:'Aljonski091200!',
+    account:'',   // Server Account Name 
+    username:'',  // your Database accountr 
+    password:'',  // Your Database Password 
     role:'ACCOUNTADMIN',
-    database:'TODO',
+    database:'',  // Your Database 
     schema:'PUBLIC',
     warehouse:'COMPUTE_WH',
 })
 
-
+// Function Connectors 
 export const connect  = async () => { 
     if(isConnected){
         console.log('Already Connected to snowflake');
@@ -32,7 +32,7 @@ export const connect  = async () => {
     })
 }
 
-
+// QUERY FOR CRUD OPERATIONS 
 export const executeQuery = async  (query:string)=>{
 
         if(!isConnected){

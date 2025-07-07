@@ -37,6 +37,9 @@ export const actions: Actions = {
 
     DeleteToDo: async({request}) =>{
         const formData = await request.formData();
+        const contentId =  formData.get('contentId') as string;
+
+        await executeQuery(`DELETE FROM MYTODOS WHERE ID = ${contentId}`);
 
 
 

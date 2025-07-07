@@ -61,8 +61,8 @@
                 </td>
                 <td class="px-6 py-4">
                   <form method="POST" action="?/DeleteToDo">
-                        <input type="hidden" value={TodoList.ID}/>
-                        <button class="py-2 px-2 bg-red-500 text-white lg:rounded"> Delete</button>
+                        <input type="hidden" value={TodoList.ID} name="contentId"/>
+                        <button class="py-2 px-2 bg-red-500 text-white lg:rounded" type="submit"> Delete</button>
                   </form>
                 </td>
             </tr>
